@@ -13,6 +13,7 @@
     "bannerbear": "^1.4.0",
     "cloudinary": "^2.6.0",
     "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "mongoose": "^8.13.2"
   },
