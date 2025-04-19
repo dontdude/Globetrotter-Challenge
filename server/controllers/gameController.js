@@ -37,7 +37,7 @@ export const checkAnswer = async (req, res) => {
   const { cityId, guess, username } = req.body;
 
   if (!cityId || !guess || !username) {
-    return res.status(400).json({ error: "Missing fields" });
+    return res.status(400).json({ error: "Missing required fields." });
   }
 
   try {
@@ -45,23 +45,32 @@ export const checkAnswer = async (req, res) => {
     const user = await User.findOne({ username });
 
     if (!city || !user) {
-      return res.status(404).json({ error: "City or user not found" });
+      return res.status(404).json({ error: "City or user not found." });
     }
 
     const isCorrect = city.city.toLowerCase() === guess.trim().toLowerCase();
+    const funFact =
+      city.fun_fact[Math.floor(Math.random() * city.fun_fact.length)];
 
+    // Update user score and attempt count
+    user.totalQuestions += 1;
     if (isCorrect) {
       user.score += 1;
-      await user.save();
     }
 
-    res.json({
+    await user.save();
+
+    // Response payload
+    res.status(200).json({
       correct: isCorrect,
-      fun_fact: city.fun_fact[Math.floor(Math.random() * city.fun_fact.length)],
+      emoji: isCorrect ? "🎉" : "😢",
+      correct_city: city.city,
+      fun_fact: funFact,
       updatedScore: user.score,
+      totalQuestions: user.totalQuestions,
     });
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: "Answer check failed" });
+    console.error("Answer check failed:", error);
+    res.status(500).json({ error: "Answer check failed." });
   }
 };
