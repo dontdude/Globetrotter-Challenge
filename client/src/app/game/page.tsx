@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { CheckCircle, ArrowRightCircle } from "lucide-react";
 import GameHeader from "./components/GameHeader";
 import CityClues from "./components/CityClues";
@@ -12,8 +12,17 @@ import { notifyError, notifySuccess } from "@/lib/notify";
 import { useSearchParams } from "next/navigation";
 import { fetchRandomDestination, fetchScore, submitAnswer } from "./service";
 import { RandomDestinationResponse, AnswerResponse } from "./type";
+import { Suspense } from "react";
 
 export default function GamePage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <GamePageContent />
+    </Suspense>
+  );
+}
+
+const GamePageContent = () => {
   const storedUsername = useUsername() || "";
   const searchParams = useSearchParams();
   const invitedBy = searchParams.get("invitedBy");
@@ -32,6 +41,12 @@ export default function GamePage() {
     totalQuestions: number;
   }>(null);
 
+  const loadNewCity = useCallback(async () => {
+    setSelectedOption("");
+    setCityData(null);
+    await fetchRandomDestination(setCityData, notifyError);
+  }, []);
+
   useEffect(() => {
     setUsername(storedUsername);
     loadNewCity();
@@ -43,7 +58,7 @@ export default function GamePage() {
         notifyError
       );
     }
-  }, [storedUsername]);
+  }, [storedUsername, loadNewCity]);
 
   useEffect(() => {
     if (invitedBy) {
@@ -60,18 +75,18 @@ export default function GamePage() {
     }
   }, [invitedBy]);
 
+  const handleNext = useCallback(() => {
+    setShowFeedback(false);
+    setFeedback(null);
+    loadNewCity();
+  }, [loadNewCity]);
+
   useEffect(() => {
     if (feedback?.correct && !showFeedback) {
       const timer = setTimeout(() => handleNext(), 3000);
       return () => clearTimeout(timer);
     }
-  }, [feedback, showFeedback]);
-
-  const loadNewCity = async () => {
-    setSelectedOption("");
-    setCityData(null);
-    await fetchRandomDestination(setCityData, notifyError);
-  };
+  }, [feedback, showFeedback, handleNext]);
 
   const handleSubmit = async () => {
     if (!cityData || !selectedOption) return;
@@ -95,12 +110,6 @@ export default function GamePage() {
       },
       notifyError
     );
-  };
-
-  const handleNext = () => {
-    setShowFeedback(false);
-    setFeedback(null);
-    loadNewCity();
   };
 
   const handlePlayAgain = () => {
@@ -187,4 +196,4 @@ export default function GamePage() {
       />
     </div>
   );
-}
+};

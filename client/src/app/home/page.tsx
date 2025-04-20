@@ -8,8 +8,17 @@ import { motion } from "framer-motion";
 import { registerUser } from "./service";
 import { notifyError, notifySuccess } from "@/lib/notify";
 import { HomeHero } from "./components/HomeHero";
+import { Suspense } from "react";
 
 export default function Home() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <HomeContent />
+    </Suspense>
+  );
+}
+
+const HomeContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const existingUsername = useUsername();
@@ -105,4 +114,4 @@ export default function Home() {
       </motion.div>
     </main>
   );
-}
+};
