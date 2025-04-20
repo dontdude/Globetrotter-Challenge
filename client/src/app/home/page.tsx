@@ -7,6 +7,7 @@ import { sanitizeUsername } from "@/lib/sanitizeUsername";
 import { motion } from "framer-motion";
 import { registerUser } from "./service";
 import { notifyError, notifySuccess } from "@/lib/notify";
+import { HomeHero } from "./components/HomeHero";
 
 export default function Home() {
   const router = useRouter();
@@ -14,6 +15,7 @@ export default function Home() {
   const existingUsername = useUsername();
   const [inputName, setInputName] = useState("");
   const [error, setError] = useState("");
+  const invitedBy = searchParams.get("invitedBy");
 
   useEffect(() => {
     if (existingUsername) {
@@ -27,43 +29,41 @@ export default function Home() {
     if (!username) {
       setError("Please enter a valid username (letters, numbers, _, -)");
       return;
-    } else {
-      await registerUser(
-        { username },
-        (data) =>
-          notifySuccess(data?.message || "User registered successfully"),
-        notifyError
-      );
     }
+
+    await registerUser(
+      { username },
+      (data) => notifySuccess(data?.message || "User registered successfully"),
+      notifyError
+    );
 
     setError("");
     localStorage.setItem("username", username);
 
     let url = `/game?username=${username}`;
-    const invitedBy = searchParams.get("invitedBy");
     if (invitedBy) url += `&invitedBy=${invitedBy}`;
 
     router.push(url);
   };
 
   return (
-    <main className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-300 to-purple-400">
-      <motion.h1
-        className="text-5xl font-bold text-white mb-6 text-center"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
+    <main className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-[#8EC5FC] to-[#E0C3FC]">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-center mb-8"
       >
-        🌍 Globetrotter Challenge
-      </motion.h1>
+        <HomeHero />
+      </motion.div>
 
       <motion.div
-        className="bg-white p-6 rounded-2xl shadow-xl flex flex-col items-center w-[90%] max-w-md"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+        className="bg-white p-8 rounded-3xl shadow-2xl flex flex-col items-center w-[90%] max-w-md backdrop-blur-xl"
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <label className="text-lg font-medium text-gray-700 mb-2">
+        <label className="text-xl font-semibold text-gray-800 mb-3">
           Enter Your Username
         </label>
         <input
@@ -71,17 +71,37 @@ export default function Home() {
           value={inputName}
           onChange={(e) => setInputName(e.target.value)}
           placeholder="e.g., Chandan"
-          className="w-full p-2 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 mb-4"
+          className="w-full p-3 rounded-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 mb-3 text-center text-lg"
         />
 
-        {error && <p className="text-red-500 text-sm mb-2">{error}</p>}
+        {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
 
         <button
           onClick={handleStart}
-          className="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-2 rounded-xl transition-all"
+          className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-bold px-6 py-2 rounded-full transition-all duration-300 shadow-md"
         >
           🚀 Start Game
         </button>
+
+        <p className="text-sm text-gray-500 mt-4">
+          Your progress will be saved under this username
+        </p>
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-6 text-white text-sm"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+      >
+        {invitedBy ? (
+          <span>
+            You were invited by <strong>{invitedBy}</strong>! Challenge your
+            friends now!
+          </span>
+        ) : (
+          "Invite your friends and challenge them!"
+        )}
       </motion.div>
     </main>
   );
