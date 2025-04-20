@@ -112,7 +112,11 @@ export default function GamePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 px-4 pb-10">
-      <GameHeader score={score} onPlayAgain={handlePlayAgain} />
+      <GameHeader
+        score={score}
+        onPlayAgain={handlePlayAgain}
+        username={username}
+      />
       {cityData ? (
         <div className="max-w-3xl mx-auto mt-6 p-4 bg-white rounded-xl shadow-xl space-y-6">
           {inviter && (

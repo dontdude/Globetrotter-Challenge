@@ -49,8 +49,7 @@ export const checkAnswer = async (req, res) => {
     }
 
     const isCorrect = city.city.toLowerCase() === guess.trim().toLowerCase();
-    const funFact =
-      city.fun_fact[Math.floor(Math.random() * city.fun_fact.length)];
+    const funFact = city.fun_fact;
 
     // Update user score and attempt count
     user.totalQuestions += 1;

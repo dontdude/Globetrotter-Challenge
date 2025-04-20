@@ -8,7 +8,7 @@ export interface AnswerResponse {
     correct: boolean;
     emoji: string;
     correct_city: string;
-    fun_fact: string;
+    fun_fact: string[];
     updatedScore: number;
     totalQuestions: number;
 }
