@@ -1,18 +1,40 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useUsername } from "@/hooks/useUsername";
+import { sanitizeUsername } from "@/lib/sanitizeUsername";
 import { motion } from "framer-motion";
 
 export default function Home() {
-  const [username, setUsername] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const existingUsername = useUsername();
+  const [inputName, setInputName] = useState("");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (existingUsername) {
+      setInputName(existingUsername);
+    }
+  }, [existingUsername]);
 
   const handleStart = () => {
-    if (username.trim()) {
-      localStorage.setItem("username", username);
-      router.push("/game");
+    const username = sanitizeUsername(inputName);
+
+    if (!username) {
+      setError("Please enter a valid username (letters, numbers, _, -)");
+      return;
     }
+
+    setError("");
+    localStorage.setItem("username", username);
+
+    let url = `/game?username=${username}`;
+    const invitedBy = searchParams.get("invitedBy");
+    if (invitedBy) url += `&invitedBy=${invitedBy}`;
+
+    router.push(url);
   };
 
   return (
@@ -37,11 +59,13 @@ export default function Home() {
         </label>
         <input
           type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={inputName}
+          onChange={(e) => setInputName(e.target.value)}
           placeholder="e.g., Chandan"
           className="w-full p-2 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 mb-4"
         />
+
+        {error && <p className="text-red-500 text-sm mb-2">{error}</p>}
 
         <button
           onClick={handleStart}
