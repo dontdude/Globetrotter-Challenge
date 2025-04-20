@@ -62,7 +62,7 @@ const FeedbackModal: React.FC<FeedbackModalProps> = ({
               onClick={onClose}
               className="bg-indigo-600 text-white px-6 py-2 rounded-xl hover:bg-indigo-700 w-full"
             >
-              {feedback.correct ? "Next" : "Play Again"}
+              {feedback.correct ? "Next" : "Try Another"}
             </button>
           </div>
         </div>

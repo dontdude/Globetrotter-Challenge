@@ -1,12 +1,13 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { CheckCircle, ArrowRightCircle } from "lucide-react";
 import GameHeader from "./components/GameHeader";
 import CityClues from "./components/CityClues";
 import OptionsGrid from "./components/OptionsGrid";
 import FeedbackModal from "./components/FeedbackModal";
 import { useUsername } from "@/hooks/useUsername";
-import { handleInvite } from "@/lib/shareInviteLink";
 import { notifyError, notifySuccess } from "@/lib/notify";
 import { useSearchParams } from "next/navigation";
 import { fetchRandomDestination, fetchScore, submitAnswer } from "./service";
@@ -31,11 +32,9 @@ export default function GamePage() {
     totalQuestions: number;
   }>(null);
 
-  // ✅ Load username and fetch score
   useEffect(() => {
     setUsername(storedUsername);
     loadNewCity();
-
     if (storedUsername) {
       fetchScore(
         storedUsername,
@@ -61,41 +60,39 @@ export default function GamePage() {
     }
   }, [invitedBy]);
 
-  // ✅ Fetch a new city on mount and on next
+  useEffect(() => {
+    if (feedback?.correct && !showFeedback) {
+      const timer = setTimeout(() => handleNext(), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [feedback, showFeedback]);
+
   const loadNewCity = async () => {
     setSelectedOption("");
     setCityData(null);
-    await fetchRandomDestination((data) => setCityData(data), notifyError);
+    await fetchRandomDestination(setCityData, notifyError);
   };
 
-  // ✅ Submit answer
   const handleSubmit = async () => {
     if (!cityData || !selectedOption) return;
-
-    const submitAnswerPayload = {
-      cityId: cityData.id,
-      guess: selectedOption,
-      username,
-    };
-
-    const handleSubmitAnswerSuccess = (data: AnswerResponse) => {
-      setFeedback(data);
-      setScore({
-        score: data.updatedScore,
-        totalQuestions: data.totalQuestions,
-      });
-      setShowFeedback(true);
-      notifySuccess(
-        data.correct
-          ? "Correct! 🎉"
-          : `Incorrect! The correct answer was ${data.correct_city}.`
-      );
-    };
+    const payload = { cityId: cityData.id, guess: selectedOption, username };
 
     await submitAnswer(
-      submitAnswerPayload,
+      payload,
       setLoading,
-      handleSubmitAnswerSuccess,
+      (data) => {
+        setFeedback(data);
+        setScore({
+          score: data.updatedScore,
+          totalQuestions: data.totalQuestions,
+        });
+        setShowFeedback(true);
+        notifySuccess(
+          data.correct
+            ? "Correct! 🎉"
+            : `Incorrect! The correct answer was ${data.correct_city}.`
+        );
+      },
       notifyError
     );
   };
@@ -107,66 +104,76 @@ export default function GamePage() {
   };
 
   const handlePlayAgain = () => {
-    localStorage.removeItem("username");
-    window.location.href = "/home";
+    if (window.confirm("Are you sure you want to start over?")) {
+      localStorage.removeItem("username");
+      window.location.href = "/home";
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-100 px-4 pb-10">
       <GameHeader score={score} onPlayAgain={handlePlayAgain} />
-
       {cityData ? (
-        <div className="max-w-2xl mx-auto mt-6 space-y-6">
+        <div className="max-w-3xl mx-auto mt-6 p-4 bg-white rounded-xl shadow-xl space-y-6">
           {inviter && (
-            <div className="text-center bg-white shadow-md p-4 rounded-xl text-purple-800 font-semibold mb-4">
-              🎉 <span className="text-lg font-bold">{inviter.name}</span>{" "}
-              invited you to play!
+            <div className="text-center bg-indigo-100 p-3 rounded-xl text-indigo-700 font-medium">
+              🎉 <strong>{inviter.name}</strong> invited you!
               <br />
-              Their Score: {inviter.score} / {inviter.totalQuestions}
-              <br />
-              Can you beat them?
+              Score: {inviter.score} / {inviter.totalQuestions} – Beat it!
             </div>
           )}
 
           <CityClues clues={cityData.clues} />
+
           <OptionsGrid
             options={cityData.options}
             selectedOption={selectedOption}
             setSelectedOption={setSelectedOption}
             disabled={loading || !!feedback}
+            isCorrect={feedback?.correct}
           />
 
-          <div className="flex justify-between items-center mt-4">
+          <div className="flex justify-center gap-4 pt-4">
             {!feedback ? (
-              <button
+              <motion.button
                 onClick={handleSubmit}
                 disabled={!selectedOption || loading}
-                className="bg-indigo-600 text-white px-6 py-2 rounded-xl hover:bg-indigo-700 disabled:opacity-50"
+                className={`bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-bold px-6 py-2 rounded-full transition-all duration-300 shadow-md ${
+                  (!selectedOption || loading) &&
+                  "opacity-50 cursor-not-allowed"
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {loading ? "Checking..." : "Submit"}
-              </button>
+                {loading ? (
+                  <span className="flex items-center gap-2">
+                    <CheckCircle className="animate-spin" size={20} />{" "}
+                    Checking...
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-2">
+                    <CheckCircle size={20} /> Submit Answer
+                  </span>
+                )}
+              </motion.button>
             ) : (
-              <button
+              <motion.button
                 onClick={handleNext}
-                className="bg-green-500 text-white px-6 py-2 rounded-xl hover:bg-green-600"
+                className="bg-gradient-to-r from-green-400 to-emerald-500 hover:from-green-500 hover:to-emerald-600 text-white font-bold px-6 py-2 rounded-full transition-all duration-300 shadow-md"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                Next
-              </button>
-            )}
-            {feedback && (
-              <button
-                onClick={() =>
-                  handleInvite(username, score.score, score.totalQuestions)
-                }
-                className="bg-yellow-500 text-white px-6 py-2 rounded-xl hover:bg-yellow-600"
-              >
-                🤝 Challenge a Friend
-              </button>
+                <span className="flex items-center gap-2">
+                  <ArrowRightCircle size={20} /> Next Challenge
+                </span>
+              </motion.button>
             )}
           </div>
         </div>
       ) : (
-        <div className="text-center mt-10 text-gray-500">Loading city...</div>
+        <div className="text-center mt-20 text-gray-500 text-lg animate-pulse">
+          🌐 Fetching your next city...
+        </div>
       )}
 
       <FeedbackModal
