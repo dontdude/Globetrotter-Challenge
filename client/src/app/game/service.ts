@@ -4,13 +4,11 @@ import {
     checkAnswerConfig,
     getScoreConfig,
 } from '@/apiConfig';
-import { registerUserConfig } from '@/apiConfig/userConfig';
 import { AxiosError } from 'axios';
 import {
     RandomDestinationResponse,
     AnswerResponse,
     ScoreResponse,
-    RegisterUserResponse
 } from './type';
 
 export const fetchRandomDestination = async (
@@ -55,22 +53,6 @@ export const fetchScore = async (
 ) => {
     try {
         const config = getScoreConfig(username);
-        const response = await axiosInstance.request(config);
-        onSuccess(response.data);
-    } catch (error) {
-        const err = error as AxiosError<{ error: string }>;
-        const errMsg = err.response?.data?.error || 'Something went wrong';
-        onError(errMsg);
-    }
-};
-
-export const registerUser = async (
-    data: { username: string },
-    onSuccess: (data: RegisterUserResponse) => void,
-    onError: (error: string) => void
-) => {
-    try {
-        const config = registerUserConfig(data);
         const response = await axiosInstance.request(config);
         onSuccess(response.data);
     } catch (error) {

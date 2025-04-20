@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useUsername } from "@/hooks/useUsername";
 import { sanitizeUsername } from "@/lib/sanitizeUsername";
 import { motion } from "framer-motion";
+import { registerUser } from "./service";
 
 export default function Home() {
   const router = useRouter();
@@ -19,12 +20,18 @@ export default function Home() {
     }
   }, [existingUsername]);
 
-  const handleStart = () => {
+  const handleStart = async () => {
     const username = sanitizeUsername(inputName);
 
     if (!username) {
       setError("Please enter a valid username (letters, numbers, _, -)");
       return;
+    } else {
+      await registerUser(
+        { username },
+        (data) => console.log(data),
+        (err) => console.error(err)
+      );
     }
 
     setError("");

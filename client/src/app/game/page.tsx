@@ -33,6 +33,7 @@ export default function GamePage() {
   // ✅ Load username and fetch score
   useEffect(() => {
     setUsername(storedUsername);
+    loadNewCity();
 
     if (storedUsername) {
       fetchScore(
@@ -68,10 +69,6 @@ export default function GamePage() {
       (err) => console.error(err)
     );
   };
-
-  useEffect(() => {
-    loadNewCity();
-  }, []);
 
   // ✅ Submit answer
   const handleSubmit = () => {
