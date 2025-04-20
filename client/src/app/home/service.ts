@@ -5,9 +5,11 @@ import { RegisterUserResponse } from './type';
 
 export const registerUser = async (
     data: { username: string },
+    setLoading: (loading: boolean) => void,
     onSuccess: (data: RegisterUserResponse) => void,
     onError: (error: string) => void
 ) => {
+    setLoading(true);
     try {
         const config = registerUserConfig(data);
         const response = await axiosInstance.request(config);
@@ -16,5 +18,7 @@ export const registerUser = async (
         const err = error as AxiosError<{ error: string }>;
         const errMsg = err.response?.data?.error || 'Something went wrong';
         onError(errMsg);
+    } finally {
+        setLoading(false);
     }
 };

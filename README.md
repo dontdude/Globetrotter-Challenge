@@ -59,7 +59,7 @@ Welcome to **Globetrotter Game**, an interactive travel guessing game that prese
 
    ```bash
    git clone https://github.com/dontdude/Globetrotter-Challenge.git
-   cd globetrotter-game
+   cd Globetrotter-Challenge
    ```
 
 2. Install dependencies:

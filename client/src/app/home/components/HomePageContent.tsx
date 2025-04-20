@@ -8,23 +8,15 @@ import { motion } from "framer-motion";
 import { registerUser } from "../service";
 import { notifyError, notifySuccess } from "@/lib/notify";
 import { HomeHero } from "./HomeHero";
-import { Suspense } from "react";
 
-export default function Home() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <HomeContent />
-    </Suspense>
-  );
-}
-
-const HomeContent = () => {
+const HomePageContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const existingUsername = useUsername();
   const [inputName, setInputName] = useState("");
   const [error, setError] = useState("");
   const invitedBy = searchParams.get("invitedBy");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (existingUsername) {
@@ -42,6 +34,7 @@ const HomeContent = () => {
 
     await registerUser(
       { username },
+      setLoading,
       (data) => notifySuccess(data?.message || "User registered successfully"),
       notifyError
     );
@@ -87,9 +80,14 @@ const HomeContent = () => {
 
         <button
           onClick={handleStart}
-          className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-bold px-6 py-2 rounded-full transition-all duration-300 shadow-md"
+          disabled={loading}
+          className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-bold px-6 py-2 rounded-full transition-all duration-300 shadow-md flex items-center justify-center gap-2 disabled:opacity-60"
         >
-          🚀 Start Game
+          {loading ? (
+            <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+          ) : (
+            "🚀 Start Game"
+          )}
         </button>
 
         <p className="text-sm text-gray-500 mt-4">
@@ -115,3 +113,5 @@ const HomeContent = () => {
     </main>
   );
 };
+
+export default HomePageContent;
