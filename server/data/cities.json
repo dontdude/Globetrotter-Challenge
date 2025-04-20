@@ -830,5 +830,949 @@
       "Addis Ababa means ‘new flower’ in Amharic.",
       "The city has a diverse cuisine influenced by both traditional Ethiopian and international styles."
     ]
+  },
+  {
+    "city": "Madhubani",
+    "country": "India",
+    "clues": [
+      "Renowned for its intricate Mithila paintings, a traditional art form passed down through generations.",
+      "Located in Bihar, this city has a rich cultural heritage and is known for its vibrant festivals."
+    ],
+    "fun_fact": [
+      "Madhubani paintings are traditionally done using fingers, twigs, brushes, nib-pens, and matchsticks.",
+      "The art form often depicts nature, mythology, and religious motifs, reflecting the region's deep-rooted traditions."
+    ],
+    "trivia": [
+      "Madhubani literally means 'forest of honey' in the local language.",
+      "The city has been a significant center for Maithili language and literature."
+    ]
+  },
+  {
+    "city": "Patna",
+    "country": "India",
+    "clues": [
+      "One of the oldest continuously inhabited places in the world, situated along the Ganges River.",
+      "Served as the capital of the ancient Magadha Empire and has a rich historical significance."
+    ],
+    "fun_fact": [
+      "Patna was known as Pataliputra in ancient times and was a hub for learning and culture.",
+      "The city houses the Golghar, a granary built by the British in 1786, offering panoramic views of the city."
+    ],
+    "trivia": [
+      "Patna is the birthplace of Guru Gobind Singh, the tenth Sikh Guru.",
+      "The city played a pivotal role during India's independence movement."
+    ]
+  },
+  {
+    "city": "Ulaanbaatar",
+    "country": "Mongolia",
+    "clues": [
+      "The capital and largest city of Mongolia, nestled between mountains.",
+      "Known for its blend of traditional nomadic culture and modern urban life."
+    ],
+    "fun_fact": [
+      "Ulaanbaatar experiences some of the coldest average temperatures of any national capital.",
+      "The city hosts the annual Naadam Festival, celebrating Mongolian culture with sports like wrestling, horse racing, and archery."
+    ],
+    "trivia": [
+      "Originally founded as a mobile monastery in 1639, it settled permanently in its current location in 1778.",
+      "The name 'Ulaanbaatar' means 'Red Hero' in Mongolian."
+    ]
+  },
+  {
+    "city": "Erdenet",
+    "country": "Mongolia",
+    "clues": [
+      "Home to one of the largest copper mines in the world.",
+      "A city that was established in the 1970s to support mining operations."
+    ],
+    "fun_fact": [
+      "Erdenet's mining operations contribute significantly to Mongolia's GDP.",
+      "The city was developed with Soviet assistance and has a distinct architectural style reflecting that era."
+    ],
+    "trivia": [
+      "Despite its industrial focus, Erdenet is surrounded by picturesque landscapes and offers opportunities for outdoor activities.",
+      "The city's name means 'with treasure' in Mongolian."
+    ]
+  },
+  {
+    "city": "Lviv",
+    "country": "Ukraine",
+    "clues": [
+      "A city known for its well-preserved medieval architecture and vibrant cultural scene.",
+      "Often referred to as the cultural capital of Ukraine."
+    ],
+    "fun_fact": [
+      "Lviv's historic center is a UNESCO World Heritage Site.",
+      "The city hosts numerous festivals annually, including the Lviv Coffee Festival and the International Jazz Festival."
+    ],
+    "trivia": [
+      "Lviv was founded in the 13th century and has been part of various states, including Poland and the Austro-Hungarian Empire.",
+      "The city is renowned for its coffee culture, with many historic cafés dotting its streets."
+    ]
+  },
+  {
+    "city": "Odessa",
+    "country": "Ukraine",
+    "clues": [
+      "A port city on the Black Sea, known for its beaches and 19th-century architecture.",
+      "Famous for its Potemkin Stairs and vibrant cultural life."
+    ],
+    "fun_fact": [
+      "Odessa's catacombs are among the longest in the world, stretching over 2,500 kilometers.",
+      "The city has a unique blend of cultures, having been influenced by Russian, Jewish, and Mediterranean traditions."
+    ],
+    "trivia": [
+      "Odessa was founded in the late 18th century by a decree from Empress Catherine the Great.",
+      "The city's opera house is considered one of the most beautiful in Europe."
+    ]
+  },
+  {
+    "city": "Kyoto",
+    "country": "Japan",
+    "clues": [
+      "Once the imperial capital of Japan, known for its classical Buddhist temples and gardens.",
+      "Famous for its traditional wooden houses and geisha culture."
+    ],
+    "fun_fact": [
+      "Kyoto is home to over 1,600 Buddhist temples and 400 Shinto shrines.",
+      "The city is renowned for its kaiseki dining, a traditional multi-course Japanese meal."
+    ],
+    "trivia": [
+      "Kyoto was spared from bombing during World War II, preserving its historical sites.",
+      "The city's Gion district is famous for its geisha and traditional teahouses."
+    ]
+  },
+  {
+    "city": "Osaka",
+    "country": "Japan",
+    "clues": [
+      "A bustling port city known for its modern architecture and vibrant nightlife.",
+      "Often referred to as the 'Kitchen of Japan' due to its culinary scene."
+    ],
+    "fun_fact": [
+      "Osaka is home to the first Universal Studios theme park outside the United States.",
+      "The city is famous for dishes like takoyaki (octopus balls) and okonomiyaki (savory pancakes)."
+    ],
+    "trivia": [
+      "Osaka Castle, a historic landmark, played a major role in the unification of Japan during the 16th century.",
+      "The city's Dotonbori district is known for its neon lights and entertainment options."
+    ]
+  },
+  {
+    "city": "Busan",
+    "country": "South Korea",
+    "clues": [
+      "This coastal city is famous for its beaches and Asia’s largest film festival.",
+      "Home to Jagalchi Market, Korea’s largest seafood market."
+    ],
+    "fun_fact": [
+      "Busan’s Haeundae Beach is one of the most popular summer destinations in South Korea.",
+      "The city was briefly the provisional capital of South Korea during the Korean War."
+    ],
+    "trivia": [
+      "Busan is home to the world’s largest department store: Shinsegae Centum City.",
+      "Gamcheon Culture Village, once a slum, is now a colorful artistic hub and major tourist attraction."
+    ]
+  },
+  {
+    "city": "Gyeongju",
+    "country": "South Korea",
+    "clues": [
+      "Often referred to as ‘the museum without walls’.",
+      "This city was once the capital of the ancient Silla Kingdom."
+    ],
+    "fun_fact": [
+      "Gyeongju has the largest number of historical relics in South Korea.",
+      "Bulguksa Temple and Seokguram Grotto here are UNESCO World Heritage Sites."
+    ],
+    "trivia": [
+      "The city houses the Cheomseongdae Observatory, one of the oldest surviving observatories in Asia.",
+      "Ancient tombs in Gyeongju resemble large grassy mounds dotting the landscape."
+    ]
+  },
+  {
+    "city": "Yogyakarta",
+    "country": "Indonesia",
+    "clues": [
+      "Known for preserving classical Javanese culture, arts, and heritage.",
+      "Close to the famous Borobudur and Prambanan temples."
+    ],
+    "fun_fact": [
+      "Yogyakarta is the only Indonesian region still officially ruled by a monarchy.",
+      "The city is a major educational hub with multiple universities."
+    ],
+    "trivia": [
+      "Wayang kulit (shadow puppet) performances are still actively performed here.",
+      "It was once the capital of Indonesia during the struggle for independence."
+    ]
+  },
+  {
+    "city": "Dhaka",
+    "country": "Bangladesh",
+    "clues": [
+      "The capital and largest city of Bangladesh, located along the Buriganga River.",
+      "Famous for rickshaws, jute trade, and Mughal-era architecture."
+    ],
+    "fun_fact": [
+      "Dhaka is known as the 'Rickshaw Capital of the World' with over 400,000 in operation.",
+      "The Lalbagh Fort in Dhaka was left unfinished after the death of its Mughal patron."
+    ],
+    "trivia": [
+      "It’s one of the most densely populated cities in the world.",
+      "The annual Dhaka Art Summit draws global attention to contemporary art."
+    ]
+  },
+  {
+    "city": "Kandy",
+    "country": "Sri Lanka",
+    "clues": [
+      "This city is home to the Temple of the Sacred Tooth Relic.",
+      "Surrounded by lush hills and a serene lake in central Sri Lanka."
+    ],
+    "fun_fact": [
+      "The city hosts the Esala Perahera, one of the oldest and grandest Buddhist festivals.",
+      "Kandy was the last capital of the ancient kings’ era of Sri Lanka."
+    ],
+    "trivia": [
+      "UNESCO has listed Kandy as a World Heritage Site for its cultural significance.",
+      "The Royal Botanical Gardens in Peradeniya near Kandy is over 200 years old."
+    ]
+  },
+  {
+    "city": "Colombo",
+    "country": "Sri Lanka",
+    "clues": [
+      "The commercial capital and largest city of Sri Lanka.",
+      "Known for its colonial buildings and vibrant street markets."
+    ],
+    "fun_fact": [
+      "Colombo was once a major port city for traders from around the world.",
+      "The city has a mix of modern skyscrapers and colonial-era architecture."
+    ],
+    "trivia": [
+      "The Galle Face Green is a popular ocean-side promenade in Colombo.",
+      "Colombo is home to the National Museum, which houses a vast collection of artifacts."
+    ]
+  },
+  {
+    "city": "Tel Aviv",
+    "country": "Israel",
+    "clues": [
+      "A modern city known for its tech industry and vibrant nightlife.",
+      "Famous for its Bauhaus architecture and Mediterranean beaches."
+    ],
+    "fun_fact": [
+      "Tel Aviv is known as the ‘Start-Up City’ due to its thriving tech ecosystem, often ranked as one of the best cities for innovation.",
+      "The city was founded in 1909 on land that was once part of the ancient port city of Jaffa."
+    ],
+    "trivia": [
+      "Tel Aviv is the second-largest city in Israel after Jerusalem.",
+      "It was the first city in the world to have a fully automated, driverless bus service."
+    ]
+  },
+  {
+    "city": "Malé",
+    "country": "Maldives",
+    "clues": [
+      "The capital city of the Maldives, known for its mosques and colorful buildings.",
+      "A small island city with a high population density."
+    ],
+    "fun_fact": [
+      "Malé is one of the most densely populated cities in the world, with a population of over 150,000 in a small area of less than 9 square kilometers.",
+      "The Maldives has a unique tradition of sandbank weddings, where couples marry on small sandbanks in the ocean."
+    ],
+    "trivia": [
+      "The Maldives is the lowest country in the world, with an average elevation of just 1.5 meters above sea level.",
+      "Malé is the cultural and political hub of the Maldives."
+    ]
+  },
+  {
+    "city": "Auckland",
+    "country": "New Zealand",
+    "clues": [
+      "Known as the ‘City of Sails’ for its iconic harbor and sailing culture.",
+      "New Zealand’s largest city and a major hub for culture and commerce."
+    ],
+    "fun_fact": [
+      "Auckland is built on more than 50 extinct volcanoes, giving the city its unique topography.",
+      "The city is home to the Sky Tower, which is the tallest freestanding structure in the Southern Hemisphere."
+    ],
+    "trivia": [
+      "Auckland is the only city in the world that has a major harbor on both the Pacific Ocean and the Tasman Sea.",
+      "The Auckland War Memorial Museum holds collections that reflect New Zealand’s history, including Māori culture."
+    ]
+  },
+  {
+    "city": "Nauru",
+    "country": "Nauru",
+    "clues": [
+      "The world’s smallest island country, located in the Pacific Ocean.",
+      "The country’s economy was historically based on phosphate mining, though it faces challenges due to resource depletion."
+    ],
+    "fun_fact": [
+      "Nauru is the third smallest country by area in the world, after Vatican City and Monaco.",
+      "Nauru has no armed forces and relies on Australia for defense."
+    ],
+    "trivia": [
+      "Nauru has no official capital city, though government offices are located in the district of Yaren.",
+      "Nauru is one of the least-visited countries in the world."
+    ]
+  },
+  {
+    "city": "McMurdo Station",
+    "country": "Antarctica",
+    "clues": [
+      "The largest research station in Antarctica, operated by the United States.",
+      "Located on the edge of the Ross Ice Shelf, it serves as a hub for scientific research."
+    ],
+    "fun_fact": [
+      "McMurdo Station was established in 1955 and is named after the nearby McMurdo Sound.",
+      "It is the only U.S. station in Antarctica that is accessible by sea during the austral summer."
+    ],
+    "trivia": [
+      "The station is inhabited year-round, with around 1,000 residents in summer and around 150 during the winter months.",
+      "The station is home to some of the most extreme living conditions, with temperatures as low as -60°C (-76°F)."
+    ]
+  },
+  {
+    "city": "Doha",
+    "country": "Qatar",
+    "clues": [
+      "Known for its ultra-modern architecture and hosting the 2022 FIFA World Cup.",
+      "Qatar’s capital, a major center for commerce, finance, and culture."
+    ],
+    "fun_fact": [
+      "Doha is a major center for Islamic art, home to the Museum of Islamic Art designed by I. M. Pei.",
+      "The city’s skyline includes the Aspire Tower, one of the tallest structures in the world."
+    ],
+    "trivia": [
+      "Doha has grown rapidly from a small fishing village into a global financial hub.",
+      "The city has numerous luxury malls and hotels, including the luxurious Hotel Park in the West Bay."
+    ]
+  },
+  {
+    "city": "Srinagar",
+    "country": "India",
+    "clues": [
+      "This city is known for its serene lakes and vibrant floating markets.",
+      "It features traditional wooden houseboats and intricate papier-mâché crafts."
+    ],
+    "fun_fact": [
+      "It is one of the few places in the world where you can find floating gardens, cultivated on lakes.",
+      "The iconic wooden boats, or 'shikaras', are still handcrafted using age-old techniques passed down through generations."
+    ],
+    "trivia": [
+      "This region is famous for saffron and some of the finest pashmina in the world.",
+      "The local cuisine includes a rich multi-course feast known as 'Wazwan'."
+    ]
+  },
+  {
+    "city": "Leh",
+    "country": "India",
+    "clues": [
+      "This high-altitude desert town is surrounded by dramatic mountain landscapes.",
+      "Monasteries here are often perched on cliffs with colorful prayer flags fluttering in the wind."
+    ],
+    "fun_fact": [
+      "It’s one of the highest permanently inhabited towns in the world, sitting at over 11,000 feet.",
+      "The Magnetic Hill nearby is famous for the optical illusion that makes vehicles appear to roll uphill."
+    ],
+    "trivia": [
+      "This area is a gateway to ancient Buddhist culture and remote Himalayan trekking routes.",
+      "The air is so dry that even snow takes longer to melt here."
+    ]
+  },
+  {
+    "city": "Rishikesh",
+    "country": "India",
+    "clues": [
+      "This town is a global hub for yoga and spiritual retreats, located along a sacred river.",
+      "You can spot suspension bridges, ashrams, and adventurous rafting groups."
+    ],
+    "fun_fact": [
+      "The Beatles once stayed here in 1968, composing several songs in a nearby ashram.",
+      "It's known as the 'Yoga Capital of the World' and hosts an annual international yoga festival."
+    ],
+    "trivia": [
+      "This city bans alcohol and meat within city limits, aligning with its spiritual vibe.",
+      "The town is also a starting point for the Char Dham pilgrimage circuit."
+    ]
+  },
+  {
+    "city": "Nainital",
+    "country": "India",
+    "clues": [
+      "Nestled around a kidney-shaped lake, this hill town offers boating and scenic cable car rides.",
+      "It's surrounded by lush mountains and colonial-era schools."
+    ],
+    "fun_fact": [
+      "Its central lake is believed to be one of the 64 'Shakti Peeths' in Hindu mythology.",
+      "The town was established by the British as a summer retreat in the 19th century."
+    ],
+    "trivia": [
+      "You can visit a high-altitude zoo here with rare Himalayan species.",
+      "The town has a historic observatory that offers views of celestial bodies."
+    ]
+  },
+  {
+    "city": "Manali",
+    "country": "India",
+    "clues": [
+      "Known for its snow-capped peaks, adventure sports, and scenic valleys.",
+      "A popular spot for paragliding, skiing, and hot springs in the north."
+    ],
+    "fun_fact": [
+      "The town’s name comes from the lawgiver Manu and is linked to ancient Hindu mythology.",
+      "The nearby Rohtang Pass is often snow-covered even in summer, making it a rare sight."
+    ],
+    "trivia": [
+      "This city is a hotspot for both backpackers and honeymooners.",
+      "It offers access to some of the most scenic drives in the Himalayas."
+    ]
+  },
+  {
+    "city": "Amritsar",
+    "country": "India",
+    "clues": [
+      "This city has a temple with a golden dome surrounded by a holy pool.",
+      "Visitors often participate in mass community meals served free to thousands daily."
+    ],
+    "fun_fact": [
+      "The temple's kitchen, or 'langar', feeds over 100,000 people daily regardless of background.",
+      "The gold used to gild the temple dome weighs over 750 kilograms!"
+    ],
+    "trivia": [
+      "A historic ceremony occurs daily at a nearby border with dramatic flag-lowering rituals.",
+      "This place played a major role in India’s freedom movement."
+    ]
+  },
+  {
+    "city": "Varanasi",
+    "country": "India",
+    "clues": [
+      "Known for sacred rituals performed on riverbanks and glowing evening ceremonies.",
+      "A labyrinth of alleys and ghats lines its ancient waterfront."
+    ],
+    "fun_fact": [
+      "It is considered one of the oldest continuously inhabited cities in the world.",
+      "Flames have burned continuously at one of its cremation ghats for centuries."
+    ],
+    "trivia": [
+      "A local silk known for its shimmering texture is prized globally.",
+      "Famous authors like Mark Twain have written about its timeless aura."
+    ]
+  },
+  {
+    "city": "Ahmedabad",
+    "country": "India",
+    "clues": [
+      "This city blends ancient stepwells and modern architecture in its dry, arid climate.",
+      "Famous for its colorful kites and traditional textiles."
+    ],
+    "fun_fact": [
+      "It was India’s first UNESCO World Heritage City due to its unique heritage and planning.",
+      "A 600-year-old mosque in the city uses Hindu and Jain motifs in its Islamic design."
+    ],
+    "trivia": [
+      "The International Kite Festival here draws enthusiasts from over 40 countries.",
+      "It was home to Mahatma Gandhi's famous Sabarmati Ashram."
+    ]
+  },
+  {
+    "city": "Pune",
+    "country": "India",
+    "clues": [
+      "This city is surrounded by hills and forts and known for its student energy and tech parks.",
+      "A place where tradition meets cosmopolitan flair."
+    ],
+    "fun_fact": [
+      "It was once the cultural capital of the Maratha Empire.",
+      "It’s home to the largest film archive in Asia—The National Film Archive of India."
+    ],
+    "trivia": [
+      "It hosts an annual auto expo that draws thousands of car and bike enthusiasts.",
+      "Home to Osho International, attracting spiritual seekers from around the globe."
+    ]
+  },
+  {
+    "city": "Warangal",
+    "country": "India",
+    "clues": [
+      "Ancient stone gateways and intricate temples mark this historic city.",
+      "Its ruins tell stories of a medieval dynasty that ruled central India."
+    ],
+    "fun_fact": [
+      "The city once had massive fort walls and carved stone gateways still standing today.",
+      "Its 1,000-pillar temple is an architectural marvel from the Kakatiya era."
+    ],
+    "trivia": [
+      "Local crafts include a unique style of brassware and textile art known as 'Cheriyal'.",
+      "This city is part of India's Smart City initiative for planned urban growth."
+    ]
+  },
+  {
+    "city": "Hyderabad",
+    "country": "India",
+    "clues": [
+      "Famous for its pearl markets, spicy biryani, and a historic fort.",
+      "This city has a bustling IT sector nicknamed 'Cyberabad'."
+    ],
+    "fun_fact": [
+      "Its iconic minaret structure was built during a plague to honor the end of the outbreak.",
+      "Known as the 'City of Pearls', it was once the global trading center for gems."
+    ],
+    "trivia": [
+      "It's home to one of the biggest film studios in the world—Ramoji Film City.",
+      "This is one of the few cities in India where Urdu still flourishes alongside Telugu."
+    ]
+  },
+  {
+    "city": "Noida",
+    "country": "India",
+    "clues": [
+      "A planned urban hub known for expressways, high-rise offices, and film production.",
+      "The area boasts India’s only F1 racing circuit and several golf courses."
+    ],
+    "fun_fact": [
+      "Its full name is an acronym for New Okhla Industrial Development Authority.",
+      "It was the first city in India to get an automated waste collection system underground."
+    ],
+    "trivia": [
+      "The Film City here is a major production hub for Indian TV and news channels.",
+      "The city is part of the National Capital Region and is one of India’s greenest."
+    ]
+  },
+  {
+    "city": "Gurgaon",
+    "country": "India",
+    "clues": [
+      "This city evolved from farmland to futuristic skyline in under two decades.",
+      "It's dotted with cyber hubs, luxury malls, and upscale residential towers."
+    ],
+    "fun_fact": [
+      "It has the third-highest per capita income in India and is home to over 250 Fortune 500 companies.",
+      "It’s one of the few Indian cities with a privately-managed metro system."
+    ],
+    "trivia": [
+      "The city hosts one of the largest motor racetracks and entertainment zones in India.",
+      "Despite its rapid growth, it still borders traditional villages with centuries-old customs."
+    ]
+  },
+  {
+    "city": "Pondicherry",
+    "country": "India",
+    "clues": [
+      "This coastal town boasts colonial architecture and vibrant street cafes.",
+      "Its beaches, tree-lined boulevards, and French street signs set it apart."
+    ],
+    "fun_fact": [
+      "It was a French colony until 1954, and its cultural influence still thrives.",
+      "The city is home to Auroville, an experimental township focused on human unity."
+    ],
+    "trivia": [
+      "Locals celebrate Bastille Day with parades, a legacy of its French connection.",
+      "It features unique cuisine blending Tamil spices and French finesse."
+    ]
+  },
+  {
+    "city": "Darjeeling",
+    "country": "India",
+    "clues": [
+      "This hill station is famous for lush tea estates and narrow-gauge mountain railways.",
+      "Offers sweeping views of the Himalayas and a strong Tibetan cultural presence."
+    ],
+    "fun_fact": [
+      "It produces one of the world’s most exclusive teas, often called the 'Champagne of Teas'.",
+      "It has a UNESCO-listed toy train that climbs over 7,000 feet through loops and zigzags."
+    ],
+    "trivia": [
+      "Mountaineering legends have trained at its Himalayan Institute of Mountaineering.",
+      "The city often hosts traditional mask dances and Buddhist festivals."
+    ]
+  },
+  {
+    "city": "Shillong",
+    "country": "India",
+    "clues": [
+      "Nicknamed the ‘Scotland of the East’, this city is surrounded by pine forests and waterfalls.",
+      "It’s known for live rock music, colonial charm, and cloudy hilltop vistas."
+    ],
+    "fun_fact": [
+      "It is home to India’s only matrilineal society, where property and family name pass through women.",
+      "The city has Asia’s cleanest village just a short drive away."
+    ],
+    "trivia": [
+      "It hosted India’s first-ever rock music competition in the 1970s.",
+      "Locals here often speak impeccable English and have a distinct Western fashion sense."
+    ]
+  },
+  {
+    "city": "Aizawl",
+    "country": "India",
+    "clues": [
+      "A city perched on steep hillsides with views stretching across misty valleys.",
+      "It's known for handwoven textiles, bamboo crafts, and a peaceful pace of life."
+    ],
+    "fun_fact": [
+      "This capital sits at an altitude of over 3,500 feet and is built on rugged terrain.",
+      "Its roads often curve like ribbons along the hill slopes, offering unique panoramic drives."
+    ],
+    "trivia": [
+      "Football is a major passion here, with the local club gaining national fame.",
+      "Locals practice a unique blend of tribal traditions and Christianity."
+    ]
+  },
+  {
+    "city": "Imphal",
+    "country": "India",
+    "clues": [
+      "This city sits in a lush valley surrounded by blue hills and has a historic war cemetery.",
+      "It's also home to floating islands on a freshwater lake."
+    ],
+    "fun_fact": [
+      "It features the world’s only all-women run market, locally known as 'Ima Keithel'.",
+      "The nearby lake contains phumdis—floating biomass that form a unique ecosystem."
+    ],
+    "trivia": [
+      "The city was a key World War II battle site between Allied and Japanese forces.",
+      "It hosts ancient temples that predate many of India's better-known monuments."
+    ]
+  },
+  {
+    "city": "Cusco",
+    "country": "Peru",
+    "clues": [
+      "This high-altitude city once served as the capital of a mighty pre-Columbian empire.",
+      "It's known for its cobblestone streets and Spanish colonial buildings atop ancient ruins."
+    ],
+    "fun_fact": [
+      "Stones in its oldest walls fit together so precisely, no mortar was needed—even a knife blade can’t slip between them.",
+      "It's the gateway to a world wonder hidden in the Andes."
+    ],
+    "trivia": [
+      "Locals chew coca leaves to help with altitude sickness.",
+      "The city’s layout is shaped like a puma when seen from above, symbolizing strength in Incan culture."
+    ]
+  },
+  {
+    "city": "San Francisco",
+    "country": "USA",
+    "clues": [
+      "Famous for a red suspension bridge and steep rolling hills.",
+      "You can still ride cable cars as part of daily transit."
+    ],
+    "fun_fact": [
+      "The iconic bridge here is painted ‘International Orange’ to enhance visibility in fog.",
+      "This city was almost entirely destroyed by an earthquake and fire in 1906."
+    ],
+    "trivia": [
+      "It’s home to the oldest Chinatown in North America.",
+      "The ‘Painted Ladies’ here refer to Victorian houses, not people."
+    ]
+  },
+  {
+    "city": "Chicago",
+    "country": "USA",
+    "clues": [
+      "Known for deep-dish pizza and strong winds.",
+      "The river flowing through the city was once reversed by engineers."
+    ],
+    "fun_fact": [
+      "This city’s architecture inspired the modern skyscraper movement.",
+      "It dyes its river green every St. Patrick’s Day."
+    ],
+    "trivia": [
+      "One of the largest art museums in the U.S. is located here.",
+      "The first-ever Ferris wheel was built here for a world expo."
+    ]
+  },
+  {
+    "city": "Austin",
+    "country": "USA",
+    "clues": [
+      "Famous for live music, tech startups, and breakfast tacos.",
+      "A large population of bats emerges from a bridge at dusk here."
+    ],
+    "fun_fact": [
+      "Known as the ‘Live Music Capital of the World,’ this city hosts over 250 live music venues.",
+      "Home to one of the largest urban bat colonies in the world."
+    ],
+    "trivia": [
+      "The city slogan is ‘Keep it Weird’.",
+      "Tech giants are rapidly turning this place into the next Silicon Valley."
+    ]
+  },
+  {
+    "city": "New Orleans",
+    "country": "USA",
+    "clues": [
+      "Jazz music and colorful parades are central to this city’s culture.",
+      "A French-style quarter is its most iconic neighborhood."
+    ],
+    "fun_fact": [
+      "This city sits below sea level and relies on levees for protection.",
+      "It’s the birthplace of jazz music and has unique above-ground cemeteries."
+    ],
+    "trivia": [
+      "Mardi Gras here includes throwing beads from floats.",
+      "Known for its blend of French, African, and Spanish cultures."
+    ]
+  },
+  {
+    "city": "Denver",
+    "country": "USA",
+    "clues": [
+      "Nicknamed the ‘Mile-High City’ due to its elevation.",
+      "Surrounded by mountains but also has a vibrant urban scene."
+    ],
+    "fun_fact": [
+      "This city’s airport is twice the size of Manhattan and has many conspiracy theories.",
+      "It was founded during a gold rush in the 1800s."
+    ],
+    "trivia": [
+      "It has more days of sunshine per year than Miami.",
+      "The local capitol building has a step exactly one mile above sea level."
+    ]
+  },
+  {
+    "city": "Miami",
+    "country": "USA",
+    "clues": [
+      "This coastal city is famous for its art deco architecture and Latin culture.",
+      "You’ll find a neighborhood here with strong Cuban roots and cuisine."
+    ],
+    "fun_fact": [
+      "This city was founded by a woman, making it one of the few major U.S. cities with that distinction.",
+      "It’s the only major U.S. city founded by a woman—Julia Tuttle."
+    ],
+    "trivia": [
+      "The Everglades are just a short drive away.",
+      "It has more international banks than any other U.S. city."
+    ]
+  },
+  {
+    "city": "Edinburgh",
+    "country": "United Kingdom",
+    "clues": [
+      "This city is renowned for its historic castle perched atop a volcanic rock.",
+      "It hosts a world-famous arts festival every summer."
+    ],
+    "fun_fact": [
+      "The city's Old and New Towns are UNESCO World Heritage Sites.",
+      "It's considered one of the most haunted cities in Europe."
+    ],
+    "trivia": [
+      "The city's underground vaults are a popular spot for ghost tours.",
+      "It has more listed buildings than any other city in the UK."
+    ]
+  },
+  {
+    "city": "Manchester",
+    "country": "United Kingdom",
+    "clues": [
+      "This city played a pivotal role in the Industrial Revolution.",
+      "It's home to two of the world's most famous football clubs."
+    ],
+    "fun_fact": [
+      "The world's first passenger railway station was established here.",
+      "It has a rich musical heritage, birthing bands like The Smiths and Oasis."
+    ],
+    "trivia": [
+      "The city has a thriving arts scene, with numerous galleries and theaters.",
+      "It's known for its vibrant nightlife and diverse culinary offerings."
+    ]
+  },
+  {
+    "city": "Lyon",
+    "country": "France",
+    "clues": [
+      "This city is famous for its Renaissance architecture and traboules.",
+      "It's considered the gastronomic capital of its country."
+    ],
+    "fun_fact": [
+      "The city hosts the annual Festival of Lights, attracting millions of visitors.",
+      "It's home to one of the oldest Roman amphitheaters still in use."
+    ],
+    "trivia": [
+      "The city's old town is a UNESCO World Heritage Site.",
+      "It's known for its silk industry and historical significance in weaving."
+    ]
+  },
+  {
+    "city": "Florence",
+    "country": "Italy",
+    "clues": [
+      "This city is the birthplace of the Renaissance.",
+      "It's home to a famous bridge lined with shops over a river."
+    ],
+    "fun_fact": [
+      "The city's cathedral has the largest brick dome ever constructed.",
+      "It's the hometown of renowned figures like Leonardo da Vinci and Michelangelo."
+    ],
+    "trivia": [
+      "The Uffizi Gallery here houses some of the most important artworks of the Renaissance.",
+      "It's known for its leather goods and craftsmanship."
+    ]
+  },
+  {
+    "city": "Venice",
+    "country": "Italy",
+    "clues": [
+      "This city is built on a network of canals and is famous for its gondolas.",
+      "It's known for its annual film festival and masquerade carnival."
+    ],
+    "fun_fact": [
+      "The city is gradually sinking, with rising water levels posing a threat.",
+      "It's composed of over 100 small islands connected by bridges."
+    ],
+    "trivia": [
+      "The city's main square is home to a basilica adorned with golden mosaics.",
+      "It's renowned for its glassmaking, particularly from the island of Murano."
+    ]
+  },
+  {
+    "city": "Lucerne",
+    "country": "Switzerland",
+    "clues": [
+      "This city is nestled between a lake and mountains, offering picturesque views.",
+      "It's known for a covered wooden bridge dating back to the 14th century."
+    ],
+    "fun_fact": [
+      "The city's Lion Monument commemorates Swiss Guards who died during the French Revolution.",
+      "It's a gateway to central Switzerland's mountains and ski resorts."
+    ],
+    "trivia": [
+      "The city's annual festival features elaborate masks and costumes.",
+      "It's famous for its watchmaking and precision engineering."
+    ]
+  },
+  {
+    "city": "Munich",
+    "country": "Germany",
+    "clues": [
+      "This city hosts the world's largest beer festival every autumn.",
+      "It's known for its historic architecture and vibrant cultural scene."
+    ],
+    "fun_fact": [
+      "The city's English Garden is one of the largest urban parks globally.",
+      "It's a major center for art, technology, and finance."
+    ],
+    "trivia": [
+      "The city's central square features a clock tower with animated figurines.",
+      "It's home to several renowned museums and art galleries."
+    ]
+  },
+  {
+    "city": "Kraków",
+    "country": "Poland",
+    "clues": [
+      "This city boasts a well-preserved medieval core and a historic Jewish quarter.",
+      "It's known for its vibrant arts scene and academic heritage."
+    ],
+    "fun_fact": [
+      "The city's main square is one of the largest medieval town squares in Europe.",
+      "It's home to a dragon legend, with a statue that breathes fire."
+    ],
+    "trivia": [
+      "The city's historic center is a UNESCO World Heritage Site.",
+      "It's a hub for festivals, including film, music, and cultural events."
+    ]
+  },
+  {
+    "city": "Salzburg",
+    "country": "Austria",
+    "clues": [
+      "This city is nestled between a river and mountains, offering picturesque views.",
+      "It's renowned for its baroque architecture and musical heritage."
+    ],
+    "fun_fact": [
+      "The city's historic center is a UNESCO World Heritage Site.",
+      "It's the birthplace of a famous classical composer and the setting for a renowned musical film."
+    ],
+    "trivia": [
+      "A fortress overlooking the city is one of the largest fully preserved medieval castles in Europe.",
+      "The city's annual festival attracts artists and audiences from around the world."
+    ]
+  },
+  {
+    "city": "Boston",
+    "country": "USA",
+    "clues": [
+      "Known for its revolutionary past and cobblestone streets.",
+      "A red-brick trail links historical landmarks across the city."
+    ],
+    "fun_fact": [
+      "It is home to the oldest public park in the United States.",
+      "The first American lighthouse was built nearby in 1716."
+    ],
+    "trivia": [
+      "Famous for a university rivalry and a prestigious marathon.",
+      "The 'T' here refers to the oldest subway system in America."
+    ]
+  },
+  {
+    "city": "Richmond",
+    "country": "USA",
+    "clues": [
+      "Played a central role during the American Civil War.",
+      "Crossed by a river ideal for whitewater rafting right in the city."
+    ],
+    "fun_fact": [
+      "This city was once the capital of the Confederacy.",
+      "It has more Civil War battlefields nearby than any other U.S. city."
+    ],
+    "trivia": [
+      "You’ll find one of the oldest electric streetcar systems here.",
+      "Home to a street once voted the best in the South."
+    ]
+  },
+  {
+    "city": "Nuuk",
+    "country": "Greenland",
+    "clues": [
+      "This city is closer to Canada than to most of its own country.",
+      "Surrounded by fjords and icebergs, it’s a remote Arctic capital."
+    ],
+    "fun_fact": [
+      "It’s the smallest capital in the world by population.",
+      "Despite its remoteness, it has vibrant Inuit art and culture."
+    ],
+    "trivia": [
+      "One of the few capitals with more sled dogs than cars.",
+      "Locals often go kayaking among icebergs."
+    ]
+  },
+  {
+    "city": "Vatican City",
+    "country": "Vatican",
+    "clues": [
+      "The smallest country in the world, located entirely within another city.",
+      "Guards here wear colorful Renaissance-style uniforms."
+    ],
+    "fun_fact": [
+      "Home to the world’s largest church and the smallest population of any nation.",
+      "Its library contains texts dating back over a thousand years."
+    ],
+    "trivia": [
+      "You can send mail from a separate postal system here.",
+      "Every Wednesday, thousands gather here to hear a speech."
+    ]
+  },
+  {
+    "city": "Tashkent",
+    "country": "Uzbekistan",
+    "clues": [
+      "A Soviet-style city known for wide boulevards and ornate metro stations.",
+      "A Silk Road hub with a blend of Islamic and Soviet-era architecture."
+    ],
+    "fun_fact": [
+      "Its metro stations double as underground art galleries.",
+      "It survived a massive earthquake in 1966 and was rebuilt almost entirely."
+    ],
+    "trivia": [
+      "It has one of the oldest Qurans in existence.",
+      "Home to a giant TV tower visible from nearly any part of the city."
+    ]
   }
 ]
