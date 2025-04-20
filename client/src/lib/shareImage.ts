@@ -9,11 +9,11 @@ export function generateShareImage(username: string, score: number, totalQuestio
     const pad = (text: string, spaces: number) => `${'\u00A0'.repeat(spaces)}${text}`;
 
     const messageLines = [
-        pad('Globetrotter Challenge', 10),
+        pad('Globetrotter Challenge', 5),
         '',
         pad(`${username} scored ${score} out of ${totalQuestions}`, 4),
         '',
-        pad('Can you beat this?', 14)
+        pad('Can you beat this?', 10)
     ];
 
     const message = messageLines.join('\n');

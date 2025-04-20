@@ -6,6 +6,7 @@ import { useUsername } from "@/hooks/useUsername";
 import { sanitizeUsername } from "@/lib/sanitizeUsername";
 import { motion } from "framer-motion";
 import { registerUser } from "./service";
+import { notifyError, notifySuccess } from "@/lib/notify";
 
 export default function Home() {
   const router = useRouter();
@@ -29,8 +30,9 @@ export default function Home() {
     } else {
       await registerUser(
         { username },
-        (data) => console.log(data),
-        (err) => console.error(err)
+        (data) =>
+          notifySuccess(data?.message || "User registered successfully"),
+        notifyError
       );
     }
 
@@ -62,7 +64,7 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <label className="text-lg font-medium text-gray-700 mb-2">
-          Enter Your Name
+          Enter Your Username
         </label>
         <input
           type="text"

@@ -6,7 +6,8 @@ import CityClues from "./components/CityClues";
 import OptionsGrid from "./components/OptionsGrid";
 import FeedbackModal from "./components/FeedbackModal";
 import { useUsername } from "@/hooks/useUsername";
-import { generateShareImage } from "@/lib/shareImage";
+import { handleInvite } from "@/lib/shareInviteLink";
+import { notifyError, notifySuccess } from "@/lib/notify";
 import { useSearchParams } from "next/navigation";
 import { fetchRandomDestination, fetchScore, submitAnswer } from "./service";
 import { RandomDestinationResponse, AnswerResponse } from "./type";
@@ -40,7 +41,7 @@ export default function GamePage() {
         storedUsername,
         (data) =>
           setScore({ score: data.score, totalQuestions: data.totalQuestions }),
-        (err) => console.error(err)
+        notifyError
       );
     }
   }, [storedUsername]);
@@ -55,41 +56,47 @@ export default function GamePage() {
             score: data.score,
             totalQuestions: data.totalQuestions,
           }),
-        (err) => console.error(err)
+        notifyError
       );
     }
   }, [invitedBy]);
 
   // ✅ Fetch a new city on mount and on next
-  const loadNewCity = () => {
+  const loadNewCity = async () => {
     setSelectedOption("");
     setCityData(null);
-    fetchRandomDestination(
-      (data) => setCityData(data),
-      (err) => console.error(err)
-    );
+    await fetchRandomDestination((data) => setCityData(data), notifyError);
   };
 
   // ✅ Submit answer
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!cityData || !selectedOption) return;
 
-    submitAnswer(
-      {
-        cityId: cityData.id,
-        guess: selectedOption,
-        username,
-      },
+    const submitAnswerPayload = {
+      cityId: cityData.id,
+      guess: selectedOption,
+      username,
+    };
+
+    const handleSubmitAnswerSuccess = (data: AnswerResponse) => {
+      setFeedback(data);
+      setScore({
+        score: data.updatedScore,
+        totalQuestions: data.totalQuestions,
+      });
+      setShowFeedback(true);
+      notifySuccess(
+        data.correct
+          ? "Correct! 🎉"
+          : `Incorrect! The correct answer was ${data.correct_city}.`
+      );
+    };
+
+    await submitAnswer(
+      submitAnswerPayload,
       setLoading,
-      (data) => {
-        setFeedback(data);
-        setScore({
-          score: data.updatedScore,
-          totalQuestions: data.totalQuestions,
-        });
-        setShowFeedback(true);
-      },
-      (err) => console.error(err)
+      handleSubmitAnswerSuccess,
+      notifyError
     );
   };
 
@@ -102,32 +109,6 @@ export default function GamePage() {
   const handlePlayAgain = () => {
     localStorage.removeItem("username");
     window.location.href = "/home";
-  };
-
-  const handleInvite = (
-    username: string,
-    score: number,
-    totalQuestions: number
-  ) => {
-    const shareUrl = `${window.location.origin}/home?invitedBy=${username}`;
-    const message = `🌍 I just scored ${score}/${totalQuestions} in the Globetrotter Challenge! Can you beat me?\n Play now: ${shareUrl}`;
-
-    try {
-      const imageUrl = generateShareImage(username, score, totalQuestions);
-      const fullMessage = `${message}\n\n📸 Check out my scorecard:\n${imageUrl}`;
-
-      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-        fullMessage
-      )}`;
-      window.open(whatsappUrl, "_blank");
-    } catch (error) {
-      console.error("Error generating share image:", error);
-      // fallback without image
-      const fallbackUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-        message
-      )}`;
-      window.open(fallbackUrl, "_blank");
-    }
   };
 
   return (
